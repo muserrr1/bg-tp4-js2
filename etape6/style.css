@@ -1,0 +1,122 @@
+/* Etape 1 : mise en forme du tableau CRUD-Persons */
+ 
+/* Le conteneur (id table_container) sert a centrer le tableau au milieu de la page
+   et a mettre Calibri comme premiere police pour tout ce qu'il contient */
+#table_container {
+    font-family: Calibri, Arial, sans-serif;
+    width: 700px;
+    margin: 40px auto;   /* auto a gauche et a droite = centre */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Le tableau prend toute la largeur du conteneur, bordures collees entre elles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+ 
+/* Entete : fond bleu, texte blanc centre */
+th {
+    background-color: #0077b6;
+    color: white;
+    font-size: 13px;
+    padding: 10px;
+    text-align: center;
+}
+ 
+/* Cellules : petite police, espace a l'interieur, fine bordure grise */
+td {
+    font-size: 13px;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+}
+ 
+/* Colonnes N° et Points : etroites, texte centre */
+.col_number {
+    width: 60px;
+    text-align: center;
+}
+ 
+/* Colonnes Nom et Prénom : texte aligne a gauche (elles prennent la place qui reste) */
+.col_text {
+    text-align: left;
+}
+ 
+/* Colonne Select : etroite, case a cocher centree */
+.col_chkbox {
+    width: 70px;
+    text-align: center;
+}
+ /* Style de l'espace résumé (slide 34) */
+#container_summary {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #e6e6e6;
+    font-size: 13px;
+}
+
+#container_summary p {
+    margin: 5px 0;
+}/* Style du formulaire de saisie (slide 49) */
+#form_container {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f1f8fc;
+    border: 1px solid #cce5ff;
+}
+
+.form_group {
+    margin-bottom: 10px;
+}
+
+.form_label {
+    display: inline-block;
+    width: 70px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.form_field {
+    padding: 6px;
+    width: 220px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+}/* Style des boutons et conteneur de contrôle (slide 63) */
+#container_btn {
+    margin-top: 15px;
+}
+
+.btn-add {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-del {
+    background-color: #e76f51;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.btn-consol {
+    background-color: #457b9d;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+button:hover {
+    opacity: 0.9;
+}

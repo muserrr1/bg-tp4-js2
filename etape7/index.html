@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD-Persons - Etape 7</title>
+    <!-- on relie le fichier style.css pour mettre en forme la page -->
+    <link rel="stylesheet" href="style.css">
+    <!-- script externe script.js (slide 24), defer : execution apres le chargement de la page (slide 27) -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- tout est dans un conteneur div avec l'identifiant table_container -->
+    <div id="table_container">
+
+        <!-- formulaire de saisie, juste au-dessus du tableau -->
+        <div id="form_container">
+            <div class="form_group">
+                <label class="form_label">Nom:</label>
+                <input type="text" id="form_nom" class="form_field"/>
+            </div>
+            <div class="form_group">
+                <label class="form_label">Prénom:</label>
+                <input type="text" id="form_prenom" class="form_field"/>
+            </div>
+            <div class="form_group">
+                <label class="form_label">Points:</label>
+                <input type="number" id="form_points" class="form_field"/>
+            </div>
+            <!-- le bouton Ajouter appelle doNewData au clic (onclick, slides 15 et 17) -->
+            <button class="btn-add" onclick="doNewData()">Ajouter</button>
+        </div>
+
+        <!-- ETAPE 7, fonctionnalite 3 : champ de recherche par nom, a chaque touche tapee (onkeyup) on filtre les lignes -->
+        <div id="search_container">
+            <input type="text" id="search_field" class="form_field" placeholder="Rechercher par nom..." onkeyup="searchPersons()"/>
+        </div>
+
+        <!-- tableau : il ne contient que la ligne d'entete, le reste est insere par JavaScript -->
+        <table>
+            <tr>
+                <th>N°</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Points</th>
+                <th>Select</th>
+            </tr>
+        </table>
+
+        <!-- espace resume sous le tableau : p1 = nombre de lignes, p3 = total des points -->
+        <div id="container_summary">
+            <p id="p1">0 ligne(s)</p>
+            <p id="p2"></p>
+            <p id="p3">Totale point(s)= 0</p>
+        </div>
+
+        <!-- les boutons Console Tableau et Supprimer sont dans un div d'identifiant container_btn -->
+        <div id="container_btn">
+            <!-- ETAPE 7, fonctionnalites 2 et 1 : importer et exporter un fichier CSV -->
+            <!-- l'input file est cache (voir style.css), le bouton Importer l'ouvre avec chooseFile -->
+            <input type="file" id="import_file" accept=".csv" onchange="importPersons()"/>
+            <button class="btn-import" onclick="chooseFile()">Importer</button>
+            <button class="btn-export" onclick="exportPersons()">Exporter</button>
+            <button class="btn-consol" onclick="consoleTableau()">Console Tableau</button>
+            <!-- au clic, le bouton Supprimer appelle deleteRow (onclick, slides 15 et 17) -->
+            <button class="btn-del" onclick="deleteRow()">Supprimer</button>
+        </div>
+
+    </div>
+</body>
+</html>

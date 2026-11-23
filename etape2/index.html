@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+ 
+
+
+
+    <!-- on relie le fichier style.css pour mettre en forme le tableau -->
+    <link rel="stylesheet" href="style.css">
+    <!-- le script est dans un fichier externe script.js (slide 24) -->
+    <!-- defer : attend le chargement de la page avant d'executer le script (slide 27) -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- le tableau est dans un conteneur div avec l'identifiant table_container -->
+    <div id="table_container">
+ 
+        <!-- tableau de l'etape 1 : une ligne d'entete (th) puis 3 lignes de donnees (td) -->
+        <table>
+            <tr>
+                <th>N°</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Points</th>
+                <th>Select</th>
+            </tr>
+ 
+            <tr>
+                <td class="col_number">1</td>
+                <td class="col_text">Nom1</td>
+                <td class="col_text">Prénom1</td>
+                <td class="col_number">5</td>
+                <td class="col_chkbox"><input type="checkbox"/></td>
+            </tr>
+            <tr>
+                <td class="col_number">2</td>
+                <td class="col_text">Nom2</td>
+                <td class="col_text">Prénom2</td>
+                <td class="col_number">5</td>
+                <td class="col_chkbox"><input type="checkbox"/></td>
+            </tr>
+            <tr>
+                <td class="col_number">3</td>
+                <td class="col_text">Nom3</td>
+                <td class="col_text">Prénom3</td>
+                <td class="col_number">5</td>
+                <td class="col_chkbox"><input type="checkbox"/></td>
+            </tr>
+        </table>
+ 
+        <!-- bouton Ajouter, place dans le conteneur apres le tableau -->
+        <!-- au clic (onclick, slides 15 et 17) il appelle la fonction avec des donnees statiques -->
+        <button onclick="doInsertRowTable(99, 'nom', 'prenom', 10)">Ajouter</button>
+ 
+    </div>
+</body>
+</html>

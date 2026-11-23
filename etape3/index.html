@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD-Persons - Etape 3</title>
+    <!-- on relie le fichier style.css pour mettre en forme le tableau -->
+    <link rel="stylesheet" href="style.css">
+    <!-- le script est dans un fichier externe script.js (slide 24) -->
+    <!-- defer : attend le chargement de la page avant d'executer le script (slide 27) -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- le tableau est dans un conteneur div avec l'identifiant table_container -->
+    <div id="table_container">
+ 
+        <!-- tableau : il ne contient plus que la ligne d'entete -->
+        <!-- les lignes de donnees sont maintenant inserees par JavaScript a partir du tableau persons -->
+        <table>
+            <tr>
+                <th>N°</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Points</th>
+                <th>Select</th>
+            </tr>
+        </table>
+ 
+        <!-- bouton Ajouter, au clic (onclick, slides 15 et 17) il appelle la fonction avec des donnees statiques -->
+        <button onclick="doInsertRowTable(99, 'nom', 'prenom', 10)">Ajouter</button>
+ 
+        <!-- bouton Console Tableau, au clic il appelle la fonction consoleTableau (meme ecriture que dans script.js) -->
+        <button onclick="consoleTableau()">Console Tableau</button>
+ 
+    </div>
+</body>
+</html>
